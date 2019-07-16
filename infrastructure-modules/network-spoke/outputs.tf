@@ -1,35 +1,34 @@
 output "vnet_spoke_name" {
-  value       = module.vnet-spoke.vnet_name
-  description = "Generated spoke vnet name"
+  value       = module.vnet_spoke.vnet_name
+  description = "resource name for spoke vnet"
 }
 
 output "vnet_spoke_id" {
-  value       = module.vnet-spoke.vnet_id
-  description = "Resource id of created spoke vnet"
+  value       = module.vnet_spoke.vnet_id
+  description = "resource id for spoke vnet"
 }
 
 output "vnet_spoke_rg" {
-  value       = module.vnet-spoke.vnet_rg_name
-  description = "Generated spoke resource group name"
+  value       = module.vnet_spoke.vnet_rg_name
+  description = "resource group name for spkoke vnet"
 }
 
-output "vnet_subnets_spoke_id" {
-  value       = module.vnet-subnets-spoke.subnet_ids
-  description = "List of spoke subnets resource ids"
+output "subnet_frontend_id" {
+  value       = module.subnet_frontend.subnet_id
+  description = "resource id for frontend subnet"
 }
 
-output "vnet_subnets_names" {
-  value       = module.vnet-subnets-spoke.subnet_names
-  description = "List of spoke subnet names"
+output "subnet_frontend_name" {
+  value       = module.subnet_frontend.subnet_name
+  description = "resource name for frontend subnet"
 }
 
-output "vnet_hub_to_spoke_peering_id" {
-  value       = module.vnet-peering.vnet_hub_to_spoke_peering_id
-  description = "Resource id for peering between hub and spoke vnet"
+output "subnet_backend_id" {
+  value       = module.subnet_backend.subnet_id
+  description = "resource id for backend subnet"
 }
 
-output "vnet_spoke_to_hub_peering_id" {
-  value       = module.vnet-peering.vnet_hub_to_spoke_peering_id
-  description = "Resource id for peering between spoke and hub vnet"
+output "subnet_backend_name" {
+  value       = module.subnet_backend.subnet_name
+  description = "resource name for backend subnet"
 }
-

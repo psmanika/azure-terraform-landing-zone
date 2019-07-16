@@ -1,5 +1,5 @@
 ###############################
-# Setting up Resource Variables
+# Setting up resource variables
 ###############################
 
 variable "resource_prefix" {
@@ -14,7 +14,7 @@ variable "region" {
 }
 
 variable "environment" {
-  description = "Development environment for resource; p: Production, q: Quality and Assurance, s: Staging, d: Development or Lab"
+  description = "Development environment for resource; prod, non-prod, shared-services"
   type        = string
 }
 
@@ -30,34 +30,13 @@ variable "retention_period" {
   default     = 30
 }
 
-#######################################
-#Setting up Mandatory Tagging Variables
-#######################################
 
-variable "owner_tag" {
-  description = "APP/Technical; Email address of App/Product Owner"
-  type        = string
-}
 
-variable "region_tag" {
-  description = "Financial; i.e. Sharepoint Global"
-  type        = string
-}
 
-variable "cost_center_tag" {
-  description = "Financial; Unique - Code provided directly from Finance (BU/Brand)"
-  type        = string
-}
 
-variable "approver_tag" {
-  description = "Financial; Unique - email address"
-  type        = string
-}
 
-variable "service_hours_tag" {
-  description = "Automation/Security; Sort -FullTime\\|Weekdays..."
-  type        = string
-}
+
+
 
 
 
@@ -65,7 +44,7 @@ variable "service_hours_tag" {
 #Setting up Optional Tagging Variables
 #######################################
 
-variable "optional_tags" {
+variable "tags" {
   description = "Optional tags to be added to resource"
   type        = map
   default     = {}

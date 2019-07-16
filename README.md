@@ -1,5 +1,6 @@
 # Azure Landing Zone Template 
 [![Build Status](https://dev.azure.com/Kuhlman-Labs/azure-landing-zone-template/_apis/build/status/brettkuhlman.azure-landing-zone-template?branchName=master)](https://dev.azure.com/Kuhlman-Labs/azure-landing-zone-template/_build/latest?definitionId=1&branchName=master)
+[![Board Status](https://dev.azure.com/Kuhlman-Labs/040ac2ad-6e3c-4ed0-9fa7-9bd937d86ea0/dc26cefa-1675-4c37-bcca-b1ee83a15af2/_apis/work/boardbadge/0c1c1325-bfc5-4ade-81c7-98c1561e46fb)](https://dev.azure.com/kuhlman-labs/040ac2ad-6e3c-4ed0-9fa7-9bd937d86ea0/_boards/board/t/dc26cefa-1675-4c37-bcca-b1ee83a15af2/Microsoft.RequirementCategory)
 
 ## Purpose
 
@@ -22,22 +23,29 @@ There are dedicated `README.md` files in each directory, summarised links provid
     * [log-analytics](infrastructure-modules/log-analytics/README.md)
     * [network-hub](infrastructure-modules/network-hub/README.md)
     * [network-spoke](infrastructure-modules/network-spoke/README.md)
-    * [storage-account](infrastructure-modules/storage-account/README.md)
+    * [aks-cluster-waf-ingress](infrastructure-modules/aks-cluster-waf-ingress/README.md)
 
 * Resource Modules
+    * Backup
+        * [recovery-services-vault](resource-modules/backup/recovery-services-vault/README.md)
+    * Containers
+        * [aks-cluster](resource-modules/containers/aks-cluster/README.md)        
     * Governance
         * [key-vault](resource-modules/governance/key-vault/README.md)
         * [log-analytics](resource-modules/governance/log-analytics/README.md)
+        * [role-assignment](resource-modules/governance/role-assignment/README.md)
+        * [user-assigned-identity](resource-modules/governance/user-assigned-identity/README.md)
     * Network
+        * [application-gateway](resource-modules/network/application-gateway/README.md)
+        * [firewall](resource-modules/network/firewall/README.md)
+        * [route-table](resource-modules/network/route-table/README.md)
         * [nsg](resource-modules/network/nsg/README.md)
         * [vnet](resource-modules/network/vnet/README.md)
         * [vnet-gateway](resource-modules/network/vnet-gateway/README.md)
         * [vnet-peering](resource-modules/network/vnet-peering/README.md)
-        * [vnet-subnets](resource-modules/network/vnet-subnets/README.md)
+        * [vnet-subnet](resource-modules/network/vnet-subnet/README.md)
     *  Resource Group
         *  [resource-group](resource-modules/resource-group/README.md)
-    *  Storage
-        * [storage-account](resource-modules/storage/storage-account/README.md)
 
 ## Launching
 

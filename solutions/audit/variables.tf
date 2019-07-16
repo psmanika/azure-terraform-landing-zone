@@ -1,8 +1,28 @@
-########################################
-# Authentication Variables
-########################################
+#################
+# Audit Variables
+#################
+
+#common
+
+variable "environment" {
+  description = "Development environment for resource; prod, non-prod, shared-services"
+  type        = string
+}
+
+variable "region" {
+  description = "Geographic region resource will be deployed into"
+  type        = string
+}
+
+#authentication
+
 variable "subscription_id" {
   description = "The Id of the Subscription that should contain the created resources"
+  type        = string
+}
+
+variable "shared_services_subscription_id" {
+  description = "subscription id of shared-services env"
   type        = string
 }
 
@@ -21,17 +41,6 @@ variable "tenant_id" {
   type        = string
 }
 
-variable "shared_services_subscription_id" {
-  description = "subscription id of shared-services env"
-  type        = string
-}
-
-variable "state_key" {
-  description = "Key for the state file of the solution, e.g. pre-prod.tfstate"
-  type        = string
-}
-
-
 variable "access_key" {
   description = "access key for the storage account that contains the Remote Backend"
   type        = string
@@ -42,55 +51,14 @@ variable "storage_account_name" {
   type        = string
 }
 
-########################################
-# Variables
-########################################
-
-variable "environment" {
-  description = "Development environment for resource; p: Production, q: Quality and Assurance, s: Staging, d: Development or Lab"
+variable "state_key" {
+  description = "Key for the state file of the solution, e.g. pre-prod.tfstate"
   type        = string
 }
 
-variable "region" {
-  description = "Geographic region resource will be deployed into"
-  type        = string
-}
+#tags
 
-########################################
-# Tagging Variables
-########################################
-
-variable "owner_tag" {
-  description = "APP/Technical; Email address of App/Product Owner"
-  type        = string
-}
-
-variable "region_tag" {
-  description = "Financial; i.e. Sharepoint Global"
-  type        = string
-}
-
-variable "cost_center_tag" {
-  description = "Financial; Unique - Code provided directly from Finance (BU/Brand)"
-  type        = string
-}
-
-variable "approver_tag" {
-  description = "Financial; Unique - email address"
-  type        = string
-}
-
-variable "service_hours_tag" {
-  description = "Automation/Security; Sort -FullTime\\|Weekdays..."
-  type        = string
-}
-
-
-
-#######################################
-#Setting up Optional Tagging Variables
-#######################################
-variable "optional_tags" {
+variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map
   default     = {}
